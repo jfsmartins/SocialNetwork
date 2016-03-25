@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SocialNetwork.Models.Post>
+
+@{
+    ViewBag.Title = @ViewBag.username;
+}
+
+<br />
+<div class="row">
+    @*<div class="col-md-3">
+
+        </div>*@
+    <div class="col-md-12">
+        <center>
+            <a href="@Url.Action("UserProfile/"+@ViewBag.idUtilizador)">
+                <img class="media-object img-circle" style="height:120px; width:120px;" src="@{@ViewBag.foto}" alt="...">
+            </a>
+        </center>
+        <center>
+            <h4>@ViewBag.username</h4>
+            @{if (@ViewBag.idUtilizador != Convert.ToInt32(Session["idUtilizador"]))
+                {
+                    @Html.ActionLink("Convidar", "Invite", new { id = @ViewBag.idUtilizador }) 
+                 <label> | </label>   @Html.ActionLink("Denunciar", "ReportUser", new { id = @ViewBag.idUtilizador })
+                }}
+        </center>
+    </div>
+</div>
+
+<div class="row">
+
+    @Html.Partial("PostStream", Model)
+
+</div>

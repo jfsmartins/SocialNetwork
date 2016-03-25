@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SocialNetwork.Models.Post>
+
+@{
+    ViewBag.Title = "Feed";
+}
+
+
+
+<div class="container">
+    <div class="row">
+       @if (Session["idUtilizador"] !=null)
+       { @Html.Partial("UserSidebar", "Home"); }
+
+        <div class="col-md-7">
+            <div class="new-post">
+                @{Html.RenderAction("NewPost", "Home");}
+            </div>
+            <br />
+
+            @Html.Partial("PostStream", Model)
+
+
+        </div>
+    </div>
+</div>

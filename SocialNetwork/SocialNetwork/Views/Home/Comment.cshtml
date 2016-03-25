@@ -1,0 +1,48 @@
+﻿@model SocialNetwork.Models.Comentar
+
+
+
+@using (Ajax.BeginForm("Comment", "Home", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "comentar_" + @ViewBag.idPost,
+}, new { id = "comment-form_" + @ViewBag.idPost }))
+{
+@*@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form_comentar" }))
+{*@
+    @*@using (Ajax.BeginForm("Comment", new AjaxOptions()
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "com"
+        }))
+        {*@
+
+    @Html.AntiForgeryToken()
+    <div class="row" id="com">
+        <div class="col-md-7">
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+
+                    <div class="col-md-12">
+                        <br />
+                        <div  style="padding-bottom:3px;">
+                            @Html.EditorFor(model => model.texto, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.texto, "", new { @class = "text-danger" })
+                        </div>
+                        <input type="submit" id="comentarBotao"value="Comentar" class="btn btn-default" />
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+

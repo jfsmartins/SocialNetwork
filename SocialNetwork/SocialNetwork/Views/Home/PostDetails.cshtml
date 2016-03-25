@@ -1,0 +1,48 @@
+﻿
+
+@if (Session["idUtilizador"]!=null)
+{
+    {Html.RenderAction("Comment", (int)@ViewBag.idPost);}
+        }
+
+
+
+@{Html.RenderAction("ListComments", (int)@ViewBag.idPost);}
+
+
+<script>
+
+    $(function () {
+
+        $('#comment-form_@{@ViewBag.idPost}').on('submit', function (e) {
+            //alert('cenas');
+            //console.log(this.parent().parent().prev().children());
+            $('#nrcomentarios_@{@ViewBag.idPost}').text(parseInt($('#nrcomentarios_@{@ViewBag.idPost}').text()) + 1)
+        })
+
+
+
+
+
+
+        $('#myelement_@{@ViewBag.idPost}').click(function (e) {
+            //var id = $(this).data('assigned-id');
+            e.preventDefault();
+            //alert($('#another-element_@{@ViewBag.idPost}:visible').length);
+            $('#myelement_@{@ViewBag.idPost}').on();
+
+            if ($('#another-element_@{@ViewBag.idPost}:visible').length) {
+                $('#myelement_@{@ViewBag.idPost}').off();
+                $('#another-element_@{@ViewBag.idPost}').hide();
+
+
+            }
+            else {
+
+                $('#another-element_@{@ViewBag.idPost}').show();
+                $('#myelement_@{@ViewBag.idPost}').off();
+            }
+        });
+
+    });
+</script>

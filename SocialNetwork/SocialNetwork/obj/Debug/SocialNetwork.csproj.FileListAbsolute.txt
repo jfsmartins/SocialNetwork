@@ -1,0 +1,84 @@
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\csc.exe
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\vbc.exe
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\VBCSCompiler.exe
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\SocialNetwork.dll.config
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\SocialNetwork.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\SocialNetwork.pdb
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Helpers.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Mvc.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Razor.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Razor.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Razor.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Razor.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Helpers.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\System.Web.Mvc.xml
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\obj\Debug\SocialNetwork.csprojResolveAssemblyReference.cache
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\obj\Debug\SocialNetwork.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\obj\Debug\SocialNetwork.pdb
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\CsQuery.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\FourRoads.Common.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\FourRoads.Common.Sql.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\FourRoads.Common.TelligentCommunity.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\FourRoads.Common.Templates.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\FourRoads.Common.Web.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\Ninject.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\Ninject.Extensions.Xml.dll
+C:\Users\Joao Martins\Documents\GitHubVisualStudio\LTIC\C#\ASP.NET Web Apps\SocialNetwork\SocialNetwork\bin\CsQuery.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\csc.exe
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\vbc.exe
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\VBCSCompiler.exe
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\SocialNetwork.dll.config
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\SocialNetwork.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\SocialNetwork.pdb
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\CsQuery.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\FourRoads.Common.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\FourRoads.Common.Sql.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\FourRoads.Common.TelligentCommunity.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\FourRoads.Common.Templates.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\FourRoads.Common.Web.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\Ninject.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\Ninject.Extensions.Xml.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Helpers.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Mvc.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Razor.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Deployment.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Razor.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\CsQuery.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Razor.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Deployment.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Webpages.Razor.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Helpers.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\bin\System.Web.Mvc.xml
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\obj\Debug\SocialNetwork.csprojResolveAssemblyReference.cache
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\obj\Debug\SocialNetwork.dll
+C:\Users\joaof_000\Documents\Social Network\SocialNetwork\SocialNetwork\obj\Debug\SocialNetwork.pdb

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<SocialNetwork.Models.Comentar>
+
+
+    @*<div class="media-body">
+        
+        <a href="@Url.Action("Comment", "Home", new { id = ViewBag.idPost })" class="btn btn-default">
+            <strong>Comentar&nbsp;</strong>
+            <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+        </a>
+    </div>*@
+
+<div class="row" style="margin-left:20px; margin-top:10px;" id="comentar">
+    @*@Ajax.ActionLink(" ", "Comment", new { id = ViewBag.idPost },
+    new AjaxOptions
+    {
+        UpdateTargetId = "comentar",
+        InsertionMode = InsertionMode.Replace
+    }, new { @class = "btn btn-default glyphicon glyphicon-plus-sign" })*@
+
+
+    @*@{Html.RenderAction("Commment", "Home");}*@
+
+    @*<a href="@Url.Action("Comment", "Home")" class="btn btn-default">
+        <strong>Comentar&nbsp;</strong>
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+    </a>*@
+
+    @*@Html.RenderPartial("Comment")*@
+
+    @*@Html.ActionLink("Comentar +", "Comment", new { id = ViewBag.idPost })*@
+
+
+
+    @*<div class="col-md-9" id="comentar">
+
+        </div>*@
+
+    @*@{Html.RenderPartial("Comment");}*@
+
+    @*@Html.Partial("Comment")*@
+
+    @*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idComentador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.texto)
+            </th>
+            <th></th>
+        </tr>*@
+    
+    @foreach (var item in Model.Reverse())
+    {
+
+        if (item.idPost == ViewBag.idPost)
+        {
+            <div class="row">
+                @*<hr style="background:#1b1b1b; padding:0px; margin-bottom:3px;" />*@
+                <div class="col-md-1">
+                    <img class="media-object img-circle" style="height:36px; width:36px; padding:0px 0px 0px 0px; margin-left: 10px;" src="@{@item.Utilizador.foto}" alt="...">
+                </div>
+                <div class="col-md-4">
+                    @*@Html.DisplayFor(modelItem => item.idCriador  )*@
+                    <strong>@Html.DisplayFor(modelItem => item.Utilizador.username)</strong>
+
+                    <br />
+                    <small>@Html.DisplayFor(modelItem => item.data)</small>
+                    <br />
+                    <div class="alert alert-info" role="alert">
+                        @Html.DisplayFor(modelItem => item.texto)
+                    </div>
+                    @*@Convert.ToDateTime(Convert.ToDateTime(DateTime.Now) - Parse(item.dataCriacao)).ToString();*@
+                </div>
+            </div>
+            
+        }
+    }
+
+ 
+</div>

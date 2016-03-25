@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SocialNetwork.Models.Denuncia_Grupo>
+
+
+@{
+    ViewBag.Title = "Painel de Administração";
+}
+
+<h2>Painel de Administração</h2>
+
+<p>
+    @Html.ActionLink("Início", "AdminPanel") | @Html.ActionLink("Utilizadores Denunciados", "ReportedUsers") | @Html.ActionLink("Posts Denunciados", "ReportedPosts") | <strong>@Html.ActionLink("Grupos Denunciados", "ReportedGroups")</strong>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Denunciado
+        </th>
+        <th>
+            Denunciante
+        </th>
+        <th>
+            Motivo
+        </th>
+        <th>
+            Data
+        </th>
+        <th>
+            Ação
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grupo.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utilizador.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data)
+        </td>
+        <td>
+            @Html.ActionLink("Arquivar", "ArchiveGroupReport", new { id = item.idDenuncia }) |
+            @Html.ActionLink("Apagar Grupo", "DeleteGroup", new { id = item.Grupo.idGrupo })
+        </td>
+    </tr>
+}
+
+</table>

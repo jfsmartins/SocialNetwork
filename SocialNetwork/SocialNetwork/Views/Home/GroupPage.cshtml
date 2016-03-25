@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SocialNetwork.Models.Post>
+
+@{
+    ViewBag.Title = @ViewBag.nomeGrupo;
+}
+
+<div class="container">
+    <div class="row">
+        @if (Session["idUtilizador"] != null)
+        { @Html.Partial("UserSidebar", "Home");
+        }
+
+        @{
+            int id1 = ViewBag.idGrupo;
+        }
+
+
+        <div class="col-md-7">
+            <div class="post-individual">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>@ViewBag.nomeGrupo</h2>
+                       @{if (ViewBag.papel == "Admin") { 
+                           @Html.ActionLink("Editar", "EditGroup", new { id = @ViewBag.idGrupo }) <label> | </label>
+                           }
+                    }
+                        
+                        @Html.ActionLink("Membros", "GroupMembers", new { id = @ViewBag.idGrupo }) <label> | </label>
+
+                        @if (@ViewBag.papel == "Normal")
+                        {
+                              @Html.ActionLink("Denunciar", "ReportGroup", new { id = @ViewBag.idGrupo })                            <label> | </label>
+                        }
+
+                        @Html.ActionLink("Sair", "RemoveFromGroup", new { idUtilizador = Convert.ToInt32(Session["idUtilizador"]), idGrupo = @ViewBag.idGrupo })
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                @*@Html.Action("GroupHeader",new { id= id1})*@
+                @*@Html.Action("GroupHeader","Home", new { id= id1})*@
+                @*@{ Html.RenderAction("GroupHeader","Home", new { id = id1 }); }*@
+
+                @*@Html.RenderAction("GroupHeader", "Home");*@
+            </div>
+
+            @*<div class="post-individual">
+                    @{Html.RenderAction("NewPost", "Home");}
+                </div>*@
+            <br />
+            @Html.Partial("PostStream", Model)
+
+
+        </div>
+    </div>
+</div>

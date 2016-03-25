@@ -1,0 +1,13 @@
+
+
+
+Aulas de MP4 para o segundo teste!!!!!!!!!!!!!!!!!!!!!!
+
+
+--- Aula 7 --- Erros  404 Http, Server, Cliente  -- webconfig
+
+--- Aula 8 ---  Cookies e Variáveis de sessão
+
+--- Aula 9 --- Filtros de ação, cache, filtros de autorização e roles -- webconfig para a cache personalizada! -- controller mycache
+
+--- Aula 10 ---  -- ajax nuget manager

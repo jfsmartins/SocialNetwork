@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="YeahhMhmm" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Joao\ Martins\\Documents\\GitHubVisualStudio\\LTIC\\C\#\\ASP\.NET\ Web\ Apps\\SocialNetwork\\SocialNetwork\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Joao\ Martins\\Documents\\GitHubVisualStudio\\LTIC\\C\#\\ASP\.NET\ Web\ Apps\\SocialNetwork\\SocialNetwork\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="YeahhMhmm/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Joao\ Martins\\Documents\\GitHubVisualStudio\\LTIC\\C\#\\ASP\.NET\ Web\ Apps\\SocialNetwork\\SocialNetwork\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="SocialNetworkDBConnectionString-Web.config Connection String" description="" value="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SocialNetworkDB.mdf;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Joao\ Martins\\Documents\\GitHubVisualStudio\\LTIC\\C\#\\ASP\.NET\ Web\ Apps\\SocialNetwork\\SocialNetwork\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SocialNetworkDBConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

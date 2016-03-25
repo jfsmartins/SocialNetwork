@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SocialNetwork.Models.Denuncia_Post>
+
+@{
+    ViewBag.Title = "Painel de Administração";
+}
+
+<h2>Painel de Administração</h2>
+
+<p>
+    @Html.ActionLink("Início", "AdminPanel") | @Html.ActionLink("Utilizadores Denunciados", "ReportedUsers") | <strong>@Html.ActionLink("Posts Denunciados", "ReportedPosts")</strong> | @Html.ActionLink("Grupos Denunciados", "ReportedGroups")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Denunciante
+        </th>
+        <th>
+            Motivo
+        </th>
+        <th>
+            Texto do Post
+        </th>
+        <th>
+            Conteúdo
+        </th>
+        <th>
+            Criador do Post
+        </th>
+        <th>
+            Visibilidade
+        </th>
+        <th>
+            Data
+        </th>
+        <th>Ação</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utilizador.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post.descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post.caminho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post.Utilizador.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post.visibilidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data)
+        </td>
+        <td>
+            @Html.ActionLink("Bloquear Denunciado", "BlockUser", new { id=item.Post.idCriador }) |
+            @Html.ActionLink("Arquivar", "ArchivePostReport", new { id=item.idDenuncia }) |
+            @Html.ActionLink("Apagar", "DeletePost", new { id = item.Post.idPost })
+        </td>
+    </tr>
+}
+
+</table>

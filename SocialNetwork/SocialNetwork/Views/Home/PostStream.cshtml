@@ -1,0 +1,187 @@
+﻿@model IEnumerable<SocialNetwork.Models.Post>
+
+@foreach (var item in Model.Reverse())
+{
+
+
+
+    <div class="post-individual" id="post-individual">
+        <div class="row">
+            <div class="col-md-1 col-xs-1" >
+                <a href="UserProfile/@item.idCriador">
+                    <img class="media-object img-circle" style="height:36px; width:36px; padding:0px 0px 0px 0px;" src="@{@item.Utilizador.foto}" alt="...">
+                </a>
+            </div>
+            <div class="col-md-6 col-xs-6"style="margin-left:8px;">
+                <div class="row">
+                    @{if (Convert.ToInt32(Session["idUtilizador"]) != 0)
+                    {<strong>@Html.ActionLink(@item.Utilizador.username, "UserProfile", new { id = item.idCriador }, new { @class = "my-class" })</strong> }
+                    else
+                    {<strong>@item.Utilizador.username</strong>} }
+                    @{if (@item.idGrupo != null)
+                    { <label>> </label> @item.Grupo.nome;
+                    } }
+                </div>
+                <div class="row" style="margin-top:-5px;">
+                    <small>
+                        @Html.DisplayFor(modelItem => item.dataCriacao)
+                    </small>
+                </div>
+           </div>
+            @{if ((item.idCriador != Convert.ToInt32(Session["idUtilizador"]) && (Convert.ToInt32(Session["idUtilizador"]) != 0)))
+                {
+
+
+                    <div class="col-md-1 col-md-offset-3 col-xs-1 col-xs-offset-3 pull-right" >
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                                <li>@Html.ActionLink("Denunciar", "ReportPost", new { id = @item.idPost })</li>
+                            </ul>
+                        </div>
+                    </div>
+                }
+            }
+
+            @{if ((item.idCriador == Convert.ToInt32(Session["idUtilizador"]) && (Convert.ToInt32(Session["idUtilizador"]) != 0)))
+                {
+
+                    <div class="col-md-1 col-md-offset-3 col-xs-1 col-xs-offset-3 pull-right" >
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                                <li><a href="#myModal_@item.idPost" data-toggle="modal">Apagar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+
+
+        <div id="myModal_@item.idPost" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Apagar publicação</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tens a certeza que queres apagar esta publicação?</p>
+                        @*<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>*@
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        @Html.ActionLink("Apagar", "DeletePost", new { id = @item.idPost }, new { @class = "btn btn-primary", @style = "color:white" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h4>@Html.DisplayFor(modelItem => item.descricao)</h4>
+
+        @{if (item.tipo == "Imagem")
+            {
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a>
+                            <img class="img-responsive " src="@item.caminho">
+                        </a>
+                    </div>
+                </div>
+            }
+            if (item.tipo == "Ficheiro")
+            {
+               // @Html.ActionLink("Descarregar", "Download", new { nome = item.caminho, id = item.idPost }, new { target = "_blank" })
+
+                <a class="btn btn-primary btn-sm"
+                   href="@Url.Action("Download" ,
+                   new { nome = item.caminho, id = item.idPost })">
+                    Download
+                    <span class="glyphicon glyphicon-paperclip"></span>
+                </a>
+
+
+
+            }
+
+
+            if (item.tipo == "Vídeo")
+            {
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src="@item.caminho"></iframe>
+                </div>
+            }
+        }
+
+
+   
+        <hr style="background:#1b1b1b; padding:0px; margin:0px; margin-top:3px;" />
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-xs-2">
+                <div class="col-md-1 col-xs-1">
+                    @Ajax.ActionLink(" ", "Like", new { id = item.idPost }, new AjaxOptions
+               {
+                   UpdateTargetId = "nrlikes_" + item.idPost,
+                   InsertionMode = InsertionMode.Replace
+               }, new { @class = "glyphicon glyphicon-circle-arrow-up" })
+                </div>
+                <div class="col-md-1 col-xs-1" id="nrlikes_@item.idPost">
+                    @Html.DisplayFor(modelItem => item.gostos)
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+                <div class="col-md-1 col-xs-1">
+                    @Ajax.ActionLink(" ", "Dislike", new { id = item.idPost },
+            new AjaxOptions
+            {
+                UpdateTargetId = "nrdislikes_" + item.idPost,
+                InsertionMode = InsertionMode.Replace
+            }, new { @class = "glyphicon glyphicon-circle-arrow-down" })
+                </div>
+
+                <div class="col-md-1 col-xs-1" id="nrdislikes_@item.idPost">
+                    @Html.DisplayFor(modelItem => item.naoGostos)
+                </div>
+
+            </div>
+
+
+            <div class="col-md-2 col-xs-2">
+
+                <div class="col-md-1 col-xs-1">
+                    @Ajax.ActionLink(" ", "PostDetails", new { id = item.idPost },
+    new AjaxOptions
+    {
+        UpdateTargetId = "comentar_" + item.idPost,
+        InsertionMode = InsertionMode.Replace
+    }, new { @class = "glyphicon glyphicon-comment", id = "myelement_" + item.idPost })
+
+                </div>
+
+                <div class="col-md-1 col-xs-1" id="nrcomentarios_@item.idPost">
+                    @Html.DisplayFor(modelItem => item.nrComentarios)
+                </div>
+            </div>
+        </div>
+        <div id="another-element_@item.idPost">
+            <div id="comentar_@item.idPost">
+
+            </div>
+        </div>
+
+    </div>
+    <br />
+    
+
+            }
+

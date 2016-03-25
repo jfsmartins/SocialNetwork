@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SocialNetwork.Models.Utilizador>
+
+@{
+    ViewBag.Title = "Painel de Administração";
+}
+
+<h2>Painel de Administração</h2>
+
+<p>
+    <strong>@Html.ActionLink("Início", "AdminPanel")</strong> | @Html.ActionLink("Utilizadores Denunciados", "ReportedUsers") | @Html.ActionLink("Posts Denunciados", "ReportedPosts")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            E-mail
+        </th>
+
+        <th>
+            Estado
+        </th>
+
+        <th>
+            Tipo
+        </th>
+        <th>
+            Ação
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditUser", new { id=item.idUtilizador}) |
+            @Html.ActionLink("Bloquear", "BlockUser", new { id=item.idUtilizador })
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.idUtilizador })*@
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,32 @@
+﻿<div class="col-md-3 new-post">
+    </p>
+    <aside>
+
+        @{ if (Session["idUtilizador"] != null)
+            {
+
+                <div class="media">
+                    <div class="media-middle">
+                        <a href="UserProfile/@{@ViewBag.idUtilizador}">
+                            <center><img class="media-object img-circle" style="height:120px; width:120px;" src="@{@ViewBag.UserPhoto}" alt="foto perfil"></center>
+                        </a>
+                    </div>
+                    <p></p>
+
+                    <div class="media-body">
+                        <center> <h4 class="media-heading"><strong>@Session["username"]</strong></h4></center>
+                    </div>
+                </div>
+                        <center>@Html.ActionLink("Perfil", "UserProfile", new { id = Session["idUtilizador"] }) | @Html.ActionLink("Definições", "Settings", new { id = Session["idUtilizador"] })</center>
+
+
+
+                        <hr />
+        Html.RenderAction("UserGroups", "Home");
+    }
+        }
+
+    </aside>
+
+</div>
+

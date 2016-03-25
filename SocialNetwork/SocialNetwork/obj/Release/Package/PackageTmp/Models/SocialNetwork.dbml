@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SocialNetworkDB" Class="SocialNetworkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SocialNetworkDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SocialNetworkDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Classificar" Member="Classificars">
+    <Type Name="Classificar">
+      <Column Name="idClassificar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idUtilizador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="classificacao" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Post_Classificar" Member="Post" ThisKey="idPost" OtherKey="idPost" Type="Post" IsForeignKey="true" />
+      <Association Name="Utilizador_Classificar" Member="Utilizador" ThisKey="idUtilizador" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comentar" Member="Comentars">
+    <Type Name="Comentar">
+      <Column Name="idPost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idComentador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="texto" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Utilizador_Comentar" Member="Utilizador" ThisKey="idComentador" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Convidar" Member="Convidars">
+    <Type Name="Convidar">
+      <Column Name="idConvite" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idGrupo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizadorConvidado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizadorConvida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Grupo_Convidar" Member="Grupo" ThisKey="idGrupo" OtherKey="idGrupo" Type="Grupo" IsForeignKey="true" />
+      <Association Name="Utilizador_Convidar" Member="Utilizador" ThisKey="idUtilizadorConvidado" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+      <Association Name="Utilizador_Convidar1" Member="Utilizador1" ThisKey="idUtilizadorConvida" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Denuncia_Grupo" Member="Denuncia_Grupos">
+    <Type Name="Denuncia_Grupo">
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idGrupoDenunciado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizadorQueixoso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idDenuncia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Grupo_Denuncia_Grupo" Member="Grupo" ThisKey="idGrupoDenunciado" OtherKey="idGrupo" Type="Grupo" IsForeignKey="true" />
+      <Association Name="Utilizador_Denuncia_Grupo" Member="Utilizador" ThisKey="idUtilizadorQueixoso" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Denuncia_Post" Member="Denuncia_Posts">
+    <Type Name="Denuncia_Post">
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idPostDenunciado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizadorQueixoso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idDenuncia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Post_Denuncia_Post" Member="Post" ThisKey="idPostDenunciado" OtherKey="idPost" Type="Post" IsForeignKey="true" />
+      <Association Name="Utilizador_Denuncia_Post" Member="Utilizador" ThisKey="idUtilizadorQueixoso" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Denuncia_Utilizador" Member="Denuncia_Utilizadors">
+    <Type Name="Denuncia_Utilizador">
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizadorDenunciado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizadorQueixoso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idDenuncia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Utilizador_Denuncia_Utilizador" Member="Utilizador" ThisKey="idUtilizadorDenunciado" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+      <Association Name="Utilizador_Denuncia_Utilizador1" Member="Utilizador1" ThisKey="idUtilizadorQueixoso" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Descarregar" Member="Descarregars">
+    <Type Name="Descarregar">
+      <Column Name="idUtilizador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Utilizador_Descarregar" Member="Utilizador" ThisKey="idUtilizador" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Grupo" Member="Grupos">
+    <Type Name="Grupo">
+      <Column Name="idGrupo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="dataCriacao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visibilidade" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Grupo_Convidar" Member="Convidars" ThisKey="idGrupo" OtherKey="idGrupo" Type="Convidar" />
+      <Association Name="Grupo_Denuncia_Grupo" Member="Denuncia_Grupos" ThisKey="idGrupo" OtherKey="idGrupoDenunciado" Type="Denuncia_Grupo" />
+      <Association Name="Grupo_Perfil_Grupo" Member="Perfil_Grupos" ThisKey="idGrupo" OtherKey="idGrupo" Type="Perfil_Grupo" />
+      <Association Name="Grupo_Post" Member="Posts" ThisKey="idGrupo" OtherKey="idGrupo" Type="Post" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Perfil_Grupo" Member="Perfil_Grupos">
+    <Type Name="Perfil_Grupo">
+      <Column Name="idGrupo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUtilizador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="papel" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idPerfilGrupo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Grupo_Perfil_Grupo" Member="Grupo" ThisKey="idGrupo" OtherKey="idGrupo" Type="Grupo" IsForeignKey="true" />
+      <Association Name="Utilizador_Perfil_Grupo" Member="Utilizador" ThisKey="idUtilizador" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Post" Member="Posts">
+    <Type Name="Post">
+      <Column Name="idPost" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idCriador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="dataCriacao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="privacidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="naoGostos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gostos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nrComentarios" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="caminho" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="idGrupo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="visibilidade" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Post_Classificar" Member="Classificars" ThisKey="idPost" OtherKey="idPost" Type="Classificar" />
+      <Association Name="Post_Denuncia_Post" Member="Denuncia_Posts" ThisKey="idPost" OtherKey="idPostDenunciado" Type="Denuncia_Post" />
+      <Association Name="Grupo_Post" Member="Grupo" ThisKey="idGrupo" OtherKey="idGrupo" Type="Grupo" IsForeignKey="true" />
+      <Association Name="Utilizador_Post" Member="Utilizador" ThisKey="idCriador" OtherKey="idUtilizador" Type="Utilizador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utilizador" Member="Utilizadors">
+    <Type Name="Utilizador">
+      <Column Name="idUtilizador" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pwd" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="foto" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Utilizador_Classificar" Member="Classificars" ThisKey="idUtilizador" OtherKey="idUtilizador" Type="Classificar" />
+      <Association Name="Utilizador_Comentar" Member="Comentars" ThisKey="idUtilizador" OtherKey="idComentador" Type="Comentar" />
+      <Association Name="Utilizador_Convidar" Member="Convidars" ThisKey="idUtilizador" OtherKey="idUtilizadorConvidado" Type="Convidar" />
+      <Association Name="Utilizador_Convidar1" Member="Convidars1" ThisKey="idUtilizador" OtherKey="idUtilizadorConvida" Type="Convidar" />
+      <Association Name="Utilizador_Denuncia_Grupo" Member="Denuncia_Grupos" ThisKey="idUtilizador" OtherKey="idUtilizadorQueixoso" Type="Denuncia_Grupo" />
+      <Association Name="Utilizador_Denuncia_Post" Member="Denuncia_Posts" ThisKey="idUtilizador" OtherKey="idUtilizadorQueixoso" Type="Denuncia_Post" />
+      <Association Name="Utilizador_Denuncia_Utilizador" Member="Denuncia_Utilizadors" ThisKey="idUtilizador" OtherKey="idUtilizadorDenunciado" Type="Denuncia_Utilizador" />
+      <Association Name="Utilizador_Denuncia_Utilizador1" Member="Denuncia_Utilizadors1" ThisKey="idUtilizador" OtherKey="idUtilizadorQueixoso" Type="Denuncia_Utilizador" />
+      <Association Name="Utilizador_Descarregar" Member="Descarregars" ThisKey="idUtilizador" OtherKey="idUtilizador" Type="Descarregar" />
+      <Association Name="Utilizador_Perfil_Grupo" Member="Perfil_Grupos" ThisKey="idUtilizador" OtherKey="idUtilizador" Type="Perfil_Grupo" />
+      <Association Name="Utilizador_Post" Member="Posts" ThisKey="idUtilizador" OtherKey="idCriador" Type="Post" />
+    </Type>
+  </Table>
+</Database>

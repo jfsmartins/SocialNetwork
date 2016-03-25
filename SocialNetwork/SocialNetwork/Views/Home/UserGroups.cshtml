@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SocialNetwork.Models.Grupo>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+
+
+<h4>
+    <strong>Grupos</strong><a href="@Url.Action("NewGroup", "Home")" class="btn btn-default btn-link" style="font-size:12px; color:#1e1e1e;">
+        <strong></strong>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
+</h4>
+
+
+@foreach (var item in Model)
+{
+
+
+
+
+
+
+    @*<div class="btn-group btn-group-vertical" role="group" aria-label="...">
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               @Html.ActionLink(@item.nome, "GroupPage", new { id = item.idGrupo })
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+            </ul>
+        </div>
+    </div>*@
+
+
+    //if (item.visibilidade == true)
+    //{
+
+    <li>
+         @Html.ActionLink(@item.nome, "GroupPage", new { id = item.idGrupo })
+    </li>
+
+
+    @*}*@
+
+}

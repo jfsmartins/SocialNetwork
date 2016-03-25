@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.75, 30.5" name="SocialNetwork">
+  <DataContextMoniker Name="/SocialNetworkDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b32a51cf-7cf0-4ff7-bcd0-1e5316739a8d" absoluteBounds="6.5, 13, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Classificar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73a02c1e-e87d-4563-a99b-00e986c8f079" absoluteBounds="6.515, 13.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86a63134-02e5-4ecf-ae78-63e03a651ace" absoluteBounds="3.5, 17.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Comentar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4294c97c-4c5f-46f2-adf6-28d0689c1ca8" absoluteBounds="3.515, 17.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f0469c5-71b2-4203-bbc7-fdf6e4a82c8f" absoluteBounds="6.5, 9.875, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Convidar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8540b553-7a73-4460-bd41-d1a8df5bcb03" absoluteBounds="6.515, 10.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79780a0c-8094-4055-b805-dd3742a9eb6c" absoluteBounds="6.5, 15.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Denuncia_Grupo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b2f60e0-c306-4247-8ce7-1a65a77d659d" absoluteBounds="6.515, 16.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0b9d1ab-c6cd-457f-94f2-ea95a98dcc24" absoluteBounds="3.5, 6.875, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Denuncia_Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e439072-0408-4796-b9f5-f7698dd40323" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9448cbc9-d842-4965-a39e-28c1fc327b3e" absoluteBounds="3.5, 28.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Denuncia_Utilizador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc2aa2ba-57c9-47d6-b8aa-8673d9789d8d" absoluteBounds="3.515, 28.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0974abcb-5189-48f3-8656-8a50cfa94757" absoluteBounds="3.5, 10.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Descarregar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38c3417c-7adc-4024-aae0-5f49f93a3784" absoluteBounds="3.515, 10.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47836257-6678-484a-a149-96329cc7dd9a" absoluteBounds="6.75, 7, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Grupo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3153f989-f0e6-44d6-9adf-c1b59a5fc2e3" absoluteBounds="6.765, 7.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f54bb480-61cf-4fd3-b19c-23f624a053d5" absoluteBounds="3.5, 13, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Perfil_Grupo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd621cac-d611-48cc-af4a-0f1bab8821e7" absoluteBounds="3.515, 13.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e41f697-516c-478c-ae4d-9cdf3dc827a9" absoluteBounds="9.5, 12.25, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81674558-ada0-4a82-bb42-d203c65e39a6" absoluteBounds="9.515, 12.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="269c481b-f026-49e1-930c-0474500c7b56" absoluteBounds="0.75, 12.625, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SocialNetworkDataContext/Utilizador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a48611a4-7f4a-4342-851f-869d4913cdcf" absoluteBounds="0.765, 13.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.625 : 8.57859537760417); (7.625 : 9.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Grupo/Grupo_Convidar" />
+      <nodes>
+        <classShapeMoniker Id="47836257-6678-484a-a149-96329cc7dd9a" />
+        <classShapeMoniker Id="0f0469c5-71b2-4203-bbc7-fdf6e4a82c8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 8.57859537760417); (9.125 : 8.95359537760417); (9.125 : 15.5); (8.875 : 15.5); (8.5 : 15.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Grupo/Grupo_Denuncia_Grupo" />
+      <nodes>
+        <classShapeMoniker Id="47836257-6678-484a-a149-96329cc7dd9a" />
+        <classShapeMoniker Id="79780a0c-8094-4055-b805-dd3742a9eb6c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 8.57859537760417); (6.375 : 8.95359537760417); (5.875 : 8.95359537760417); (5.875 : 12.625); (5.5 : 13)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Grupo/Grupo_Perfil_Grupo" />
+      <nodes>
+        <classShapeMoniker Id="47836257-6678-484a-a149-96329cc7dd9a" />
+        <classShapeMoniker Id="f54bb480-61cf-4fd3-b19c-23f624a053d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 13.8854484049479); (9.20833333333333 : 13.8854484049479 : JumpStart); (9.04166666666667 : 13.8854484049479 : JumpEnd); (8.5 : 13.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Post/Post_Classificar" />
+      <nodes>
+        <classShapeMoniker Id="5e41f697-516c-478c-ae4d-9cdf3dc827a9" />
+        <classShapeMoniker Id="b32a51cf-7cf0-4ff7-bcd0-1e5316739a8d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.5 : 12.25); (10.5 : 8.73964680989583); (8.994384765625 : 8.73964680989583 : JumpStart); (8.82771809895833 : 8.73964680989583 : JumpEnd); (8.70833083333333 : 8.73964680989583 : JumpStart); (8.54166416666667 : 8.73964680989583 : JumpEnd); (7.70833333333333 : 8.73964680989583 : JumpStart); (7.54166666666667 : 8.73964680989583 : JumpEnd); (6.67228190104167 : 8.73964680989583 : JumpStart); (6.505615234375 : 8.73964680989583 : JumpEnd); (5.5 : 8.73964680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Post/Post_Denuncia_Post" />
+      <nodes>
+        <classShapeMoniker Id="5e41f697-516c-478c-ae4d-9cdf3dc827a9" />
+        <classShapeMoniker Id="b0b9d1ab-c6cd-457f-94f2-ea95a98dcc24" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.6249975 : 8.57859537760417); (8.6249975 : 12.59375); (9.04166666666667 : 12.59375 : JumpStart); (9.20833333333333 : 12.59375 : JumpEnd); (9.5 : 12.59375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Grupo/Grupo_Post" />
+      <nodes>
+        <classShapeMoniker Id="47836257-6678-484a-a149-96329cc7dd9a" />
+        <classShapeMoniker Id="5e41f697-516c-478c-ae4d-9cdf3dc827a9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.70599609375); (6.5 : 14.70599609375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Classificar" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="b32a51cf-7cf0-4ff7-bcd0-1e5316739a8d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 14.9728011067708); (1.75 : 18.3565991210938); (2.46354541666667 : 18.3565991210938 : JumpStart); (2.63021208333333 : 18.3565991210938 : JumpEnd); (3.5 : 18.3565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Comentar" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="86a63134-02e5-4ecf-ae78-63e03a651ace" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 12.625); (1.75 : 10.09375); (5.79166666666667 : 10.09375 : JumpStart); (5.95833333333333 : 10.09375 : JumpEnd); (6.5 : 10.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Convidar" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="0f0469c5-71b2-4203-bbc7-fdf6e4a82c8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 12.625); (2.2812525 : 10.2343775); (5.79166666666667 : 10.2343775 : JumpStart); (5.95833333333333 : 10.2343775 : JumpEnd); (6.5 : 10.2343775)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Convidar1" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="0f0469c5-71b2-4203-bbc7-fdf6e4a82c8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 14.9728011067708); (2.2812525 : 16.59375); (2.46354541666667 : 16.59375 : JumpStart); (2.63021208333333 : 16.59375 : JumpEnd); (6.5 : 16.59375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Denuncia_Grupo" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="79780a0c-8094-4055-b805-dd3742a9eb6c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 12.625); (1.2187475 : 7.85659912109375); (3.5 : 7.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Denuncia_Post" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="b0b9d1ab-c6cd-457f-94f2-ea95a98dcc24" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 14.9728011067708); (1.2187475 : 29.2315991210938); (3.5 : 29.2315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Denuncia_Utilizador" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="9448cbc9-d842-4965-a39e-28c1fc327b3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 14.9728011067708); (2.54687875 : 28.7095470605469); (3.5 : 28.7095470605469)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Denuncia_Utilizador1" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="9448cbc9-d842-4965-a39e-28c1fc327b3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.54687875 : 12.625); (2.54687875 : 11.0681469726562); (3.5 : 11.0681469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Descarregar" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="0974abcb-5189-48f3-8656-8a50cfa94757" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.7892976888021); (3.5 : 13.7892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Perfil_Grupo" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="f54bb480-61cf-4fd3-b19c-23f624a053d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.78125); (5.63541666666667 : 12.78125 : JumpStart); (5.80208333333333 : 12.78125 : JumpEnd); (9.04166666666667 : 12.78125 : JumpStart); (9.20833333333333 : 12.78125 : JumpEnd); (9.5 : 12.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SocialNetworkDataContext/Utilizador/Utilizador_Post" />
+      <nodes>
+        <classShapeMoniker Id="269c481b-f026-49e1-930c-0474500c7b56" />
+        <classShapeMoniker Id="5e41f697-516c-478c-ae4d-9cdf3dc827a9" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

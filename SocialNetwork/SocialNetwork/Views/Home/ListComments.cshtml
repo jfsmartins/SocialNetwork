@@ -1,0 +1,83 @@
+﻿@model IEnumerable<SocialNetwork.Models.Comentar>
+
+
+
+
+<div class="row" style="margin-left:20px; margin-top:10px;" id="comentar">
+
+    
+    @foreach (var item in Model.Reverse())
+    {
+
+        if (item.idPost == ViewBag.idPost && item.visibilidade==true)
+        {
+            <div class="row" id="comentario_@item.idComentar">
+                @*<hr style="background:#1b1b1b; padding:0px; margin-bottom:3px;" />*@
+                <div class="col-md-1">
+                    <a href="UserProfile/@item.idComentador">
+                        <img class="media-object img-circle" style="height:36px; width:36px; padding:0px 0px 0px 0px; margin-left: 10px;" src="@{@item.Utilizador.foto}" alt="...">
+</a>
+                </div>
+                <div class="col-md-4">
+                    @*@Html.DisplayFor(modelItem => item.idCriador  )*@
+                    @{if (Convert.ToInt32(Session["idUtilizador"]) != 0)
+                    {<strong>@Html.ActionLink(@item.Utilizador.username, "UserProfile", new { id = item.idComentador }, new { @class = "my-class" })</strong> }
+                    else
+                    {<strong>@item.Utilizador.username</strong>} } 
+
+                    <br />
+                    <small>@Html.DisplayFor(modelItem => item.data)</small> 
+
+                    @if (item.idComentador == Convert.ToInt32(Session["idUtilizador"]))
+                    {
+                        @*<small> <label> | </label> @Html.ActionLink("Apagar", "DeleteComment", new { id = @item.idComentar, @class="glyphicon glyphicon-trash" })</small>*@
+
+                        @*<small>
+                            <a href="@Url.Action("DeleteComment", new { id=@item.idComentar })">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <span class="sr-only">Apagar</span>
+                            </a>
+                        </small>*@
+
+                        <small>
+                            @Ajax.ActionLink(" ", "DeleteComment", new { id = item.idComentar },
+            new AjaxOptions
+            {
+                UpdateTargetId = "comentario_" + item.idComentar,
+                InsertionMode = InsertionMode.Replace
+            }, new { @class = "glyphicon glyphicon-trash", id = "delete_" + item.idComentar })
+
+                        </small>
+                    }
+                    <br />
+                 
+                        <div class="alert alert-info" role="alert">
+                            @Html.DisplayFor(modelItem => item.texto)
+                            
+                        </div>
+                   
+       
+                    @*@Convert.ToDateTime(Convert.ToDateTime(DateTime.Now) - Parse(item.dataCriacao)).ToString();*@
+                </div>
+            </div>
+
+                        }
+
+                        <script>
+
+
+    $('#delete_@{@item.idComentar}').click(function (e) {
+
+        $('#nrcomentarios_@{@ViewBag.idPost}').text(parseInt($('#nrcomentarios_@{@ViewBag.idPost}').text()) - 1)
+    })
+
+                        </script>
+
+
+    }
+
+ 
+</div>
+
+
+

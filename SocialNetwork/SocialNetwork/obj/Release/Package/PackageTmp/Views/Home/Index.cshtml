@@ -1,0 +1,115 @@
+﻿@model IEnumerable<SocialNetwork.Models.Post>
+
+@{
+    ViewBag.Title = "Feed";
+}
+
+@*<h2>News Feed</h2>*@
+<h2></h2>
+        </p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+
+
+        <div class="col-md-7">
+
+            <a href="@Url.Action("Login", "Home")" class="btn btn-default">
+                <strong>Novo Post&nbsp;</strong>
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            </a>
+
+            <hr style="background:#1b1b1b; border:0; height:3px; border-radius:25px; opacity:0.5;" />
+
+            @foreach (var item in Model.Reverse())
+            {
+
+                <div class="row">
+                    <div class="col-md-1">
+                        <img class="media-object img-circle" style="height:36px; width:36px; padding:0px 0px 0px 0px;" src="@{@item.Utilizador.foto}" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                        @*@Html.DisplayFor(modelItem => item.idCriador  )*@
+                        <strong>@Html.DisplayFor(modelItem => item.Utilizador.username)</strong>
+
+                        <br />
+                        <small>@Html.DisplayFor(modelItem => item.dataCriacao)</small>
+                        @*@Convert.ToDateTime(Convert.ToDateTime(DateTime.Now) - Parse(item.dataCriacao)).ToString();*@
+                    </div>
+                </div>
+
+                <h4>@Html.DisplayFor(modelItem => item.descricao)</h4>
+
+
+                        <hr style="background:#1b1b1b; padding:0px; margin:0px;" />
+
+
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <div class="col-md-1">
+                                    @Html.ActionLink(" ", "Login", new { id = item.idPost }, new { @class = "glyphicon glyphicon-circle-arrow-up" }) @*new AjaxOptions { UpdateTargetId = "nrlikes_" + item.idPost, InsertionMode = InsertionMode.Replace }, new { @class = "glyphicon glyphicon-circle-arrow-up" })*@
+                                </div>
+                                <div class="col-md-1" id="nrlikes_@item.idPost">
+                                    @Html.DisplayFor(modelItem => item.gostos)
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="col-md-1">
+                                    @Html.ActionLink(" ", "Login", new { id = item.idPost }, new { @class = "glyphicon glyphicon-circle-arrow-down" })
+                                                                @*//new AjaxOptions
+                                                                //{
+                                                                //    UpdateTargetId = "nrdislikes_" + item.idPost,
+                                                                //    InsertionMode = InsertionMode.Replace
+                                                                //*@
+                                </div>
+
+                                <div class="col-md-1" id="nrdislikes_@item.idPost">
+                                    @Html.DisplayFor(modelItem => item.naoGostos)
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-2">
+
+                                <div class="col-md-1">
+                                    @Ajax.ActionLink(" ", "PostDetails", new { id = item.idPost },
+    new AjaxOptions
+    {
+        UpdateTargetId = "comentar_" + item.idPost,
+        InsertionMode = InsertionMode.Replace
+    }, new { @class = "glyphicon glyphicon-comment" })
+
+                                    @*<a href="@Url.Action("Post_Details","Home", new { id=item.idPost })">
+                                            <i class="glyphicon glyphicon-comment"></i>
+                                            <span class="sr-only">Comentários</span>
+                                        </a>*@@*<a href="@Url.Action(" Post_Details","Home", new { id=item.idPost })">
+                                            <i class="glyphicon glyphicon-comment"></i>
+                                            <span class="sr-only"></span>
+                                        </a>*@
+                                    </div>
+
+                                    <div class="col-md-1" id="nrcomentarios_@item.idPost">
+                                        @Html.DisplayFor(modelItem => item.nrComentarios)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="comentar_@item.idPost">
+
+                            </div>
+
+                            <hr style="background:#1b1b1b; border:0; height:3px; border-radius:25px; opacity:0.5;" />
+
+
+    }
+
+
+
+        </div>
+    </div>
+</div>

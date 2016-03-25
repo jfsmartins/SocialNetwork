@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SocialNetwork.Models.Utilizador>
+
+@{
+    ViewBag.Title = "Resultados da pesquisa...";
+}
+
+<h2>Resultados da pesquisa...</h2>
+<br />
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    @*<tr>*@
+    @*<th>
+            @Html.DisplayNameFor(model => model.foto)
+        </th>
+        <th>
+            Username
+        </th>*@
+    @*<th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pwd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo)
+        </th>*@
+    @*<th></th>*@
+    @*</tr>*@
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="@Url.Action("UserProfile/"+@item.idUtilizador)">
+                            <img class="media-object img-circle" style="height:120px; width:120px;" src="@{@item.foto}" alt="...">
+                            </a>
+                    </div>
+                    <div class="col-md-10">
+                        <br /><br />
+                        @Html.ActionLink(@item.username, "UserProfile", new { id = item.idUtilizador }, new { @class = "my-class" })
+                        @{if (item.idUtilizador != Convert.ToInt32(Session["idUtilizador"]))
+                {
+                                <br />  @Html.ActionLink("Convidar", "Invite", new { id = item.idUtilizador })
+                                <label> | </label>   @Html.ActionLink("Denunciar", "ReportUser", new { id =item.idUtilizador })
+                            }
+
+                        }
+
+                    </div>
+                </div>
+
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.username)
+                </td>*@
+
+            <td>
+
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.idUtilizador })*@
+            </td>
+        </tr>
+                            }
+
+</table>

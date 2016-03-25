@@ -1,0 +1,96 @@
+﻿a.my-class { color: #000000 }
+a.my-class:active { color: #000000}
+a.my-class:link { color: #000000 }
+a.my-class:visited { color: #000000 }
+
+
+.posts{
+    background:#ffffff;
+    /*margin-top:10px;*/
+     /*height:100%;
+     display: table-cell;*/
+     /*box-shadow: 10px 10px 5px #888888;*/
+
+     box-shadow: 0 0 20px #ccc;
+     /*border-radius:5px;
+     border:0px;*/
+
+   /*border-style:solid;
+   border-color:#636363;*/
+   /*border:1px solid black;*/
+}
+
+.new-post{
+    background:#ffffff;
+    /*margin-top:-5px;*/
+     /*height:100%;
+     display: table-cell;*/
+     /*box-shadow: 10px 10px 5px #888888;*/
+     /*margin:3px;*/
+     box-shadow: 0 0 5px #ccc;
+     border-radius:2px;
+     border:0px;
+     padding:10px;
+
+   /*border-style:solid;
+   border-color:#636363;*/
+   /*border:1px solid black;*/
+}
+
+
+.post-individual{
+    background:#ffffff;
+    margin-top:-5px;
+     /*height:100%;
+     display: table-cell;*/
+     /*box-shadow: 10px 10px 5px #888888;*/
+     /*margin:3px;*/
+     box-shadow: 0 0 5px #ccc;
+     border-radius:2px;
+     border:0px;
+     padding:10px;
+
+   /*border-style:solid;
+   border-color:#636363;*/
+   /*border:1px solid black;*/
+}
+.posts2{
+    background:#f1f1f1;
+    /*margin-top:10px;*/
+    
+     border-radius:5px;
+     border:0px;
+
+}
+
+.badge-notify{
+   background:red;
+   position:relative;
+   top: -7px;
+   left: 5px;
+   /*border-style:solid;*/
+   border-color:#636363;
+  }
+
+
+.bell-notify{
+   background:red;
+   position:relative;
+   top: 5px;
+   left: 35px;
+   color: #fff;
+  }
+
+.round-corners{
+    max-width: 100%;  !important;
+    width: 100%; !important;
+}
+
+
+.logotipo{
+     /*max-width:24px;
+    max-height:24px;*/
+padding: 10px;
+}
+
+

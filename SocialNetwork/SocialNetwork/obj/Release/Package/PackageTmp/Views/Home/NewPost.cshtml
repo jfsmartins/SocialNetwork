@@ -1,0 +1,101 @@
+﻿@model SocialNetwork.Models.Post
+
+@{
+    ViewBag.Title = "Novo Post";
+}
+
+@using (Html.BeginForm("NewPost", "Home", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+
+
+        <div>
+            <div class="col-md-12" style="padding-bottom:3px;">
+                @*@Html.TextBoxFor(model => model.descricao, new { htmlAttributes = new { @class = "form-control round-corners", @placeholder = "O que vai na tua mente...?", style = "width:500px;" } })*@
+                @Html.TextAreaFor(model => model.descricao, new { @class="form-control round-corners", @placeholder = "O que vai na tua mente...?",  style = "width: 1900px" })
+                @Html.ValidationMessageFor(model => model.descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="div1">
+            <div class="col-md-3" style="padding-bottom:3px;">
+                @Html.DropDownListFor(model => Model.tipo, (SelectList)ViewBag.tipo, htmlAttributes: new { @class = "form-control round-corners", id = "choosen" })
+                @*@Html.ValidationMessageFor(model => model.tipo, "", new { @class = "text-danger" })*@
+            </div>
+            <div class="col-md-6 ">
+                @Html.DropDownListFor(model => Model.privacidade, (SelectList)ViewBag.privacidade, htmlAttributes: new { @class = "form-control round-corners" })
+                @*@Html.ValidationMessageFor(model => model.privacidade, "", new { @class = "text-danger" })*@
+                @*<input type="submit" value="Publicar" class="btn btn-default" />*@
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Publicar" class="btn btn-default round-corners" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="div2" class="form-group" hidden>
+            <div class="col-md-10">
+                <input id="File1" type="file" name="nome" />
+                @Html.ValidationMessageFor(model => model.caminho, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div id="div3" class="form-group" hidden>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.caminho, new { htmlAttributes = new { @class = "form-control", @placeholder = "Link" } })
+                @Html.ValidationMessageFor(model => model.caminho, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    
+    @*<div>
+        <hr style="background:#1b1b1b; border:0; height:3px; border-radius:25px; opacity:0.5;" />
+    </div>*@
+}
+
+
+
+
+
+
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // $("#div1").hide();
+        $("#div2").hide();
+        $("#div3").hide();
+
+        $("#choosen").change(function () {
+            if ($("#choosen").val() == "Texto") {
+                // $("#div1").show();
+                $("#div2").hide();
+                $("#div3").hide();
+            }
+            if ($("#choosen").val() == "Imagem") {
+
+                $("#div2").show();
+            }
+            if ($("#choosen").val() == "Vídeo") {
+                $("#div2").hide();
+                $("#div3").show();
+            }
+            if ($("#choosen").val() == "Ficheiro") {
+
+                $("#div2").show();
+                $("#div3").hide();
+            }
+
+            //else {
+            //   // $("#div2").show();
+            //    $("#div2").hide();
+            //}
+        });
+    });
+</script>
